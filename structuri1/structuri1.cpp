@@ -1,20 +1,41 @@
-// structuri1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include <iostream>
+#include "structuri.h"
+#include "functii.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Masina x;
+
+    x.marca = "audi";
+    x.an = 1993;
+    x.model = "a4";
+
+    Masina a;
+
+    a.marca = "mercedes-benz";
+    a.an = 2006;
+    a.model = "e36";
+
+    Masina b;
+
+    b.marca = "volkswagen";
+    b.an = 2012;
+    b.model = "a43";
+
+    Masina c;
+
+    c.marca = "bmw";
+    c.an = 2000;
+    c.model = "e200";
+
+    Masina masini[100] = { x,a,b,c };
+    int d = 4;
+    /*for (int i = 0; i < 4; i++) {
+        cout << masini[i].marca << endl;
+    }*/
+
+    //afisareMarca(masini, 4);
+    Masina masinaAnMax = celMaiMareAn(masini, d);
+    cout << masinaAnMax.marca;
+    
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
